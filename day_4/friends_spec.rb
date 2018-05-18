@@ -119,13 +119,18 @@ end
 
   # 8. Find the set of everyone's favourite food joined together
   # (hint: concatenate the favourites/snack arrays together)
-  # def test_everyone_favourite_food
-  #   result = every_favourite_food(@people)
-  #   assert_equal([:favourites][:snacks].length)
-  # end
-
+  def test_everyone_favourite_food
+    result = every_favourite_food(@people)
+    assert_equal("charcuterie soup bread Scooby snacks spaghetti ratatouille spinach", result)
+  end
 
   # 9. Find people with no friends
   # (hint: return an array, there might be more people in the future with no friends!)
+  def test_find_no_friends
+    assert_equal([@person5], find_no_friends(@people))
+  end
+
+end
+
 
 end
