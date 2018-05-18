@@ -75,37 +75,37 @@ class TestFriends < MiniTest::Test
   def test_getting_favourite_tv_show
     result = get_favourite_tv_show(@person1)
     assert_equal("Friends", result)
-end
+  end
 
   # 3. For a given person, check if they like a particular food
   # (e.g. the function likes_to_eat(@person2, "bread") should return true,
   # likes_to_eat(@person3, "spinach") should return false)
-def test_persons_likes_to_eat_food
-  result = likes_to_eat(@person2, "soup")
-  assert_equal(true, result)
-end
+  def test_persons_likes_to_eat_food
+    result = likes_to_eat(@person2, "soup")
+    assert_equal(true, result)
+  end
 
   # 4. For a given person, add a new name to their list of friends
   # (e.g. the function add_friend(@person2, "Scrappy-Doo") should add Scrappy-Doo to the friends.)
   # (hint: This function should not return anything. After the function call, check for the length of the friends array to test it!)
-def test_add_friend_list
-  add_friend(@person4, "Cleyra")
-  assert_equal(4, @person4[:friends].length)
-end
+  def test_add_friend_list
+    add_friend(@person4, "Cleyra")
+    assert_equal(4, @person4[:friends].length)
+  end
 
   # 5. For a given person, remove a specific name from their list of friends
   # (hint: Same as above, testing for the length of the array should be sufficient)
-def test_remove_friend_list
-  remove_friend(@person2, "Fred")
-  assert_equal(0, @person2[:friends].length)
-end
+  def test_remove_friend_list
+    remove_friend(@person2, "Fred")
+    assert_equal(0, @person2[:friends].length)
+  end
 
   # 6. Find the total of everyone's money
   # (hint: use the @people array, remember how we checked the total number of eggs yesterday?)
-def test_total_everyone_money
-result = total_everyone_money(@people)
-assert_equal(143, result)
-end
+  def test_total_everyone_money
+    result = total_everyone_money(@people)
+    assert_equal(143, result)
+  end
 
   # 7. For two given people, allow the first person to loan a given value of money to the other
   # (hint: our function will probably need 3 arguments passed to it... the lender, the lendee, and the amount for this function)
